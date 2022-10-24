@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="686.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inscription.ges.controllers.ClasseController">
+   <children>
+      <AnchorPane layoutX="3.0" layoutY="58.0" prefHeight="297.0" prefWidth="330.0">
+         <children>
+            <Text layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nouvelle Classe">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="32.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Libellé">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Pane layoutX="33.0" layoutY="122.8134765625" />
+            <Button layoutX="14.0" layoutY="159.0" mnemonicParsing="false" onAction="#handleCreerClasse" prefHeight="54.0" prefWidth="200.0" text="créer classe" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <TextField fx:id="libelleInscription" layoutX="32.0" layoutY="75.0" prefHeight="25.0" prefWidth="185.0" promptText="EX : ETSE2A" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="342.0" layoutY="58.0" prefHeight="300.0" prefWidth="341.0">
+         <children>
+            <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des Classes">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TableView fx:id="tblClasses" layoutX="12.0" layoutY="38.0" prefHeight="242.0" prefWidth="321.0">
+              <columns>
+                <TableColumn fx:id="idColumn" prefWidth="161.0" text="Id" />
+                <TableColumn fx:id="libelleColumn" prefWidth="159.0" text="Libellé" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Text layoutX="217.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion Classe">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="225.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Affecter classe à professeur">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="31.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Classe">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="31.0" layoutY="506.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Professeur">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="libelleAffecter" layoutX="31.0" layoutY="440.0" prefHeight="32.0" prefWidth="200.0" promptText="libellé" />
+      <TextField fx:id="nciAffecter" layoutX="31.0" layoutY="526.0" prefHeight="32.0" prefWidth="200.0" promptText="NCI" />
+      <Button layoutX="317.0" layoutY="478.0" mnemonicParsing="false" onAction="#handleAffecter" prefHeight="25.0" prefWidth="139.0" text="Enregistrer" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
